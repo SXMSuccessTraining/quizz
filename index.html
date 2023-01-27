@@ -17,14 +17,6 @@
   </style>
 </head>
 <body>
-  <div class="quiz">
-    <div class="question">Quel est votre nom?</div>
-    <input type="text" placeholder="Entrez votre nom">
-    <div class="message">Merci d'avoir participé!</div>
-  </div>
-</body>
-</html>
-
 <div id="quiz">
     <div id="questions"></div>
     <button id="submit-btn" onclick="checkAnswer()">Soumettre</button>
@@ -152,4 +144,6 @@ function displayScore() {
     var scoreEl = document.getElementById('score');
     scoreEl.innerHTML = 'Votre score est: ' + score + '/' + questions.length;
 }
+  </body>
+</html>
 </script>
