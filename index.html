@@ -1,58 +1,87 @@
-<style>
-    #quiz {
-        background: linear-gradient(to top, #40E0D0, white);
-        padding: 20px;
-        border-radius: 40px 40px 0 0;
-        border-top: 40px solid #000080;
-    }
-    #questions h2 {
-        font-family: Arial;
-        font-size: 20px;
-    }
-    .choice {
-        font-family: Arial;
-        font-size: 16px;
-    }
-    #submit-btn, #score, #message {
-        font-family: Arial;
-        font-size: 16px;
-    }
-</style>
-<div id="quiz">
-    <div id="questions"></div>
-    <button id="submit-btn" onclick="checkAnswer()">Soumettre</button>
-</div>
-<div id="score"></div>
-<div id="message"></div>
-<script>
-var score = 0;
-var currentQuestion = 0;
-var questions = [
-    {
-        question: "Quelle est la date de la capitulation officielle de l'Allemagne?",
-        choices: ["8 mai 1945", "15 août 1945", "2 septembre 1945", "7 novembre 1945"],
-        correctAnswer: "8 mai 1945"
-    },
-    {
-    question: "Combien de morts civils y a-t-il eu en Europe pendant la Seconde Guerre mondiale?",
-    choices: ["Environ 6 millions", "Environ 12 millions", "Environ 20 millions", "Environ 30 millions"],
-    correctAnswer: "Environ 20 millions"
-    },
-    {
-    question: "Qui a dirigé les procès de Nuremberg?",
-    choices: ["Winston Churchill", "Joseph Staline", "Harry Truman", "Robert Jackson"],
-    correctAnswer: "Robert Jackson"
-    },
-    {
-    question: "Quelle est la date de création de l'Organisation des Nations Unies?",
-    choices: ["24 octobre 1945", "24 novembre 1945", "24 décembre 1945", "24 janvier 1946"],
-    correctAnswer: "24 octobre 1945"
-    },
-    {
-    question: "Comment appelle-t-on la doctrine des Etats-Unis pendant la Guerre froide ?",
-    choices: ["Doctrine Eisenhower", "Doctrine Kennedy", "Doctrine Truman", "Doctrine Reagan"],
-    correctAnswer: "Doctrine Truman"
-    },
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz sur la Seconde Guerre mondiale</title>
+	<style>
+		#quiz {
+			background: linear-gradient(to top, #40E0D0, white);
+			padding: 20px;
+			border: 1px solid #553218;
+			cursor: pointer;
+		}
+		#questions h2 {
+			font-family: Arial;
+			font-size: 20px;
+			color: black;
+			text-decoration: none;
+		}
+		.choice {
+			font-family: Arial;
+			font-size: 16px;
+			color: black;
+			text-decoration: none;
+		}
+		#submit-btn, #score, #message {
+			font-family: Arial;
+			font-size: 16px;
+		}
+		@media screen and (max-width: 480px) {
+			#quiz {
+				padding: 10px;
+				border: 1px solid #553218;
+			}
+			#questions h2 {
+				font-size: 16px;
+				color: black;
+				text-decoration: none;
+			}
+			.choice {
+				font-size: 14px;
+				color: black;
+				text-decoration: none;
+			}
+			#submit-btn, #score, #message {
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="quiz" onclick="window.open('https://www.sxm-success-training.com/quizz','_blank')">
+	    <div id="questions"></div>
+	    <button id="submit-btn">Soumettre</button>
+	</div>
+</body>
+	<script>
+		var score = 0;
+		var currentQuestion = 0;
+		var questions = [
+			{
+				question: "Quelle est la date de la capitulation officielle de l'Allemagne?",
+				choices: ["8 mai 1945", "15 août 1945", "2 septembre 1945", "7 novembre 1945"],
+				correctAnswer: "8 mai 1945"
+			},
+			{
+				question: "Combien de morts civils y a-t-il eu en Europe pendant la Seconde Guerre mondiale?",
+				choices: ["Environ 6 millions", "Environ 12 millions", "Environ 20 millions", "Environ 30 millions"],
+				correctAnswer: "Environ 20 millions"
+			},
+			{
+				question: "Qui a dirigé les procès de Nuremberg?",
+				choices: ["Winston Churchill", "Joseph Staline", "Harry Truman", "Robert Jackson"],
+				correctAnswer: "Robert Jackson"
+			},
+			{
+				question: "Quelle est la date de création de l'Organisation des Nations Unies?",
+				choices: ["24 octobre 1945", "24 novembre 1945", "24 décembre 1945", "24 janvier 1946"],
+				correctAnswer: "24 octobre 1945"
+			},
+			{
+				question: "Comment appelle-t-on la doctrine des Etats-Unis pendant la Guerre froide?",
+				choices: ["Doctrine Eisenhower", "Doctrine Kennedy", "Doctrine Truman", "Doctrine Reagan"],
+				correctAnswer: "Doctrine Truman"
+			},
     {
     question: "Et la docrine soviétique?",
     choices: ["Doctrine de Jdanov", "Doctrine de la révolution", "Doctrine de la défense nationale", "Doctrine du socialisme"],
